@@ -33,6 +33,14 @@ try {
 }
 ```
 
+Before, using [yongjhih/rx-mqtt](https://github.com/yongjhih/rx-mqtt):
+
+```java
+MqttObservable.client("tcp://test.mosquitto.org:1883")
+  .flatMap(client -> MqttObservable.message(client, "lobby"))
+  .subscribe(System.out::println);
+```
+
 Before, using [yongjhih/rx-mqtt](https://github.com/yongjhih/rx-mqtt) for android:
 
 ```java
